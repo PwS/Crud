@@ -79,7 +79,10 @@ spring.datasource.url=jdbc:mysql://localhost:3306/sakila
 spring.datasource.username=root
 spring.datasource.password=
 ```
-2. Get The DDL Script on ***\Crud\src\main\resources\liquibase\changelog\sql**
+2. Get The DDL Script on 
+```
+*\Crud\src\main\resources\liquibase\changelog\sql
+```
    <img src="images/DDL Located.png" alt="drawing" width="800"/>
 3. Execute the DDL On Database IDE or http://localhost/phpmyadmin/
 4. Simply Click Running on MenuBar (**1** for Running and **2** for Debug)
