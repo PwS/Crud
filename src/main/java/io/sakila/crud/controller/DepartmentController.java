@@ -96,7 +96,7 @@ public class DepartmentController {
     }
 
     @Operation(summary = "Delete Department", description = "Delete Department")
-    @DeleteMapping("/deleteDepartment/")
+    @DeleteMapping("/deleteDepartment")
     public ResponseEntity<GlobalResponseDTO> deleteDepartment(@RequestBody DepartmentRequestDeletedDTO request) {
         if (request.getDepartmentId() == null) {
             throw new DepartmentException("Missing Value Required Fields Id " + request.getDepartmentId());
