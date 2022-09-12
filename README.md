@@ -1,4 +1,4 @@
-## Cryd
+## Crud
 Example For Crud Structure Employee , Department
 
 ## File or Application needed
@@ -65,7 +65,7 @@ Open Using Your IDE (For This Example Using IntelliJ)
 <img src="images/GetFromUrl.png" alt="drawing" width="800"/>
 
 # PreDefine Connection
-1. For THis Example Using XAMPP (Run the Apache & My SQL)
+1. For This Example Using XAMPP (Run the Apache & My SQL)
 <img src="images/Start MySql on XAMPP.png" alt="drawing" width="800"/>
 2. After Successfuly Running Go To [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/) and create new database , naming as you wish
    <img src="images/Create New Database.png" alt="drawing" width="800"/>
