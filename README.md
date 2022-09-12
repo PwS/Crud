@@ -1,5 +1,5 @@
 ## Cryd
-Example For Crud Structure EmployeeDepartment
+Example For Crud Structure Employee , Department
 
 ## File or Application needed
 * [XAMPP](https://www.apachefriends.org/download.html) - MySql Local
