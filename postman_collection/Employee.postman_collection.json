@@ -1,0 +1,1063 @@
+{
+	"info": {
+		"_postman_id": "e1f9c5ab-c323-400a-aa33-4d8ebef2bd3c",
+		"name": "Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10753008"
+	},
+	"item": [
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Department/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Department",
+								"findAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findAllSuccess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/findAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"findAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:46:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Data Found !\",\n    \"DateTime\": \"12-09-2022 10:46:05\",\n    \"Data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Department/findById/:deptId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Department",
+								"findById",
+								":deptId"
+							],
+							"variable": [
+								{
+									"key": "deptId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findByIdSuccess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/findById/:deptId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"findById",
+										":deptId"
+									],
+									"variable": [
+										{
+											"key": "deptId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:48:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Data Not Found !\",\n    \"DateTime\": \"12-09-2022 10:48:40\"\n}"
+						}
+					]
+				},
+				{
+					"name": "createDepartment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"departmentName\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Department/createDepartment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Department",
+								"createDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createDepartmentSuccess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departmentName\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/createDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"createDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:49:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Create Data\",\n    \"DateTime\": \"12-09-2022 10:49:34\",\n    \"Data\": {\n        \"departmentId\": \"FQ32\",\n        \"departmentName\": \"test\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateDepartment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"departmentId\": \"FQ32\",\r\n  \"departmentName\": \"gantinama\",\r\n  \"updatedBy\": \"14045\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Department/updateDepartment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Department",
+								"updateDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departmentId\": \"string\",\r\n  \"departmentName\": \"string\",\r\n  \"updatedBy\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/updateDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"updateDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:50:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Gagal Update Data\",\n    \"DateTime\": \"12-09-2022 10:50:45\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departmentId\": \"FQ32\",\r\n  \"departmentName\": \"gantinama\",\r\n  \"updatedBy\": \"14045\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/updateDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"updateDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:54:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Update Data\",\n    \"DateTime\": \"12-09-2022 10:54:25\",\n    \"Data\": {\n        \"departmentId\": \"FQ32\",\n        \"departmentName\": \"gantinama\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteDepartment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"departmentId\": \"FQ32\",\r\n  \"updatedBy\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Department/deleteDepartment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Department",
+								"deleteDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departmentId\": \"123\",\r\n  \"updatedBy\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/deleteDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"deleteDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 03:59:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Gagal Delete Data\",\n    \"DateTime\": \"12-09-2022 10:59:47\",\n    \"Data\": \"Department Id 123\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departmentId\": \"FQ32\",\r\n  \"updatedBy\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Department/deleteDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Department",
+										"deleteDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:01:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Delete Data\",\n    \"DateTime\": \"12-09-2022 11:00:59\",\n    \"Data\": \"Department Id FQ32\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Employee/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Employee",
+								"findAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/findAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"findAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:05:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Data Found !\",\n    \"DateTime\": \"12-09-2022 11:05:00\",\n    \"Data\": [\n        {\n            \"employeeNo\": 3,\n            \"firstName\": \"ketiga\",\n            \"lastName\": \"tiga\",\n            \"gender\": \"M\",\n            \"birthDate\": \"1969-12-31\",\n            \"hireDate\": \"2021-12-31\",\n            \"salary\": null,\n            \"titles\": []\n        },\n        {\n            \"employeeNo\": 4,\n            \"firstName\": \"ketiga\",\n            \"lastName\": \"tiga\",\n            \"gender\": \"M\",\n            \"birthDate\": \"1969-12-31\",\n            \"hireDate\": \"2021-12-31\",\n            \"salary\": null,\n            \"titles\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Employee/findById/:employeeId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Employee",
+								"findById",
+								":employeeId"
+							],
+							"variable": [
+								{
+									"key": "employeeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/findById/:employeeId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"findById",
+										":employeeId"
+									],
+									"variable": [
+										{
+											"key": "employeeId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:05:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Data Not Found !\",\n    \"DateTime\": \"12-09-2022 11:05:16\"\n}"
+						}
+					]
+				},
+				{
+					"name": "createEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"satu satu satu\",\r\n    \"lastName\": \"dua dua dua\",\r\n    \"birthDate\": \"1990-01-02\",\r\n    \"gender\": \"M\",\r\n    \"hireDate\": \"2022-09-01\",\r\n    \"salary\": {\r\n        \"salaryValue\": \"12000000\"\r\n    },\r\n    \"titles\": [\r\n        {\r\n            \"titleValue\": \"satu\"\r\n        },\r\n        {\r\n            \"titleValue\": \"dua\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Employee/createEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Employee",
+								"createEmployee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"test FirstName\",\r\n    \"lastName\": \"test lastName\",\r\n    \"birthDate\": \"1990-01-02\",\r\n    \"gender\": \"M\",\r\n    \"hireDate\": \"2022-09-01\",\r\n    \"salary\": {\r\n        \"salaryValue\": \"12000000\"\r\n    },\r\n    \"titles\": [\r\n        {\r\n            \"titleValue\": \"titlesatu\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/createEmployee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"createEmployee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:09:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Create Data\",\n    \"DateTime\": \"12-09-2022 12:09:00\",\n    \"Data\": {\n        \"employeeNo\": 34,\n        \"firstName\": \"test FirstName\",\n        \"lastName\": \"test lastName\",\n        \"gender\": \"M\",\n        \"birthDate\": \"1990-01-02\",\n        \"hireDate\": \"2022-09-01\",\n        \"salary\": {\n            \"salaryId\": 11,\n            \"salaryValue\": 12000000\n        },\n        \"titles\": [\n            {\n                \"titlesId\": 28,\n                \"titleValue\": \"titlesatu\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateEmployee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeNo\": 4,\r\n    \"firstName\": \"gantiNama\",\r\n    \"lastName\": \"belakang\",\r\n    \"birthDate\": \"1992-02-02\",\r\n    \"gender\": \"M\",\r\n    \"hireDate\": \"2022-01-01\",\r\n    \"salaries\": null,\r\n    \"titles\": [],\r\n    \"updateBy\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Employee/updateEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Employee",
+								"updateEmployee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateEmployee",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeNo\": 4,\r\n    \"firstName\": \"gantiNama\",\r\n    \"lastName\": \"belakang\",\r\n    \"birthDate\": \"1992-02-02\",\r\n    \"gender\": \"M\",\r\n    \"hireDate\": \"2022-01-01\",\r\n    \"salaries\": null,\r\n    \"titles\": [],\r\n    \"updateBy\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/updateEmployee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"updateEmployee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:10:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Update Data\",\n    \"DateTime\": \"12-09-2022 11:10:23\",\n    \"Data\": {\n        \"employeeNo\": 4,\n        \"firstName\": \"gantiNama\",\n        \"lastName\": \"belakang\",\n        \"gender\": \"M\",\n        \"birthDate\": \"1992-02-02\",\n        \"hireDate\": \"2022-01-01\",\n        \"salary\": null,\n        \"titles\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeId\": 3,\r\n  \"userId\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/sakila_crud/main/api/Employee/deleteEmployee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"sakila_crud",
+								"main",
+								"api",
+								"Employee",
+								"deleteEmployee",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": 0,\r\n  \"userId\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/deleteEmployee/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"deleteEmployee",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:08:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Gagal Delete Data\",\n    \"DateTime\": \"12-09-2022 11:08:20\",\n    \"Data\": \"Employee Id 0\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": 3,\r\n  \"userId\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5005/sakila_crud/main/api/Employee/deleteEmployee/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"sakila_crud",
+										"main",
+										"api",
+										"Employee",
+										"deleteEmployee",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:08:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Berhasil Delete Data\",\n    \"DateTime\": \"12-09-2022 11:08:40\",\n    \"Data\": \"Employee Id 3\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
