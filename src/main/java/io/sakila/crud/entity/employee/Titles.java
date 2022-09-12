@@ -1,12 +1,11 @@
 package io.sakila.crud.entity.employee;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.sakila.crud.entity.AbstractAuditingEntity;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -25,6 +24,7 @@ public class Titles extends AbstractAuditingEntity {
     @JoinColumn(name = "emp_no", referencedColumnName = "emp_no")
     private Employee employee;
 
+    @JsonBackReference
     @Column(name = "title")
     private String titleValue;
 

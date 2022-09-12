@@ -42,7 +42,7 @@ public class Employee extends AbstractAuditingEntity {
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Salaries salary;
 
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Titles> titles;
 
     public Employee(String firstName, String lastName, Date birthDate, Gender gender, Date hireDate, Salaries salary, List<Titles> titles) {
@@ -53,6 +53,11 @@ public class Employee extends AbstractAuditingEntity {
         this.hireDate = hireDate;
         this.salary = salary;
         this.titles = titles;
+    }
+
+    public void setTitles(List<Titles> titles) {
+        this.titles = titles;
+        titles.forEach(entity -> entity.setEmployee(this));
     }
 
 

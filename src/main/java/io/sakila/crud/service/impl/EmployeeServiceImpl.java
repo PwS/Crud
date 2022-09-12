@@ -7,10 +7,11 @@ import io.sakila.crud.model.EmployeeDTO;
 import io.sakila.crud.model.request.employee.EmployeeRequestDTO;
 import io.sakila.crud.model.request.employee.EmployeeRequestDeleteDTO;
 import io.sakila.crud.model.request.employee.EmployeeRequestUpdateDTO;
+import io.sakila.crud.model.request.employee.salary.SalaryRequestDTO;
+import io.sakila.crud.model.request.employee.title.TitlesRequestDTO;
 import io.sakila.crud.repository.EmployeeRepository;
 import io.sakila.crud.service.EmployeeService;
 import io.sakila.crud.util.ConstantValue;
-import io.sakila.crud.util.IdGenerator;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,35 +49,33 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public EmployeeDTO addEmployee(EmployeeRequestDTO valueForCreate) throws Exception {
 
+        valueForCreate.setActive(true);
+        valueForCreate.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
+        valueForCreate.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
+
+        SalaryRequestDTO salaryDTO = new SalaryRequestDTO();
+        salaryDTO.setSalaryValue(valueForCreate.getSalary().getSalaryValue());
+        salaryDTO.setActive(true);
+        salaryDTO.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
+        salaryDTO.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
+
+        List<TitlesRequestDTO> titlesRequestDTOS = new ArrayList<>();
+
+        for (TitlesRequestDTO titlesRequestDTO : valueForCreate.getTitles()) {
+            TitlesRequestDTO titlesRequestDTO1 = new TitlesRequestDTO();
+            titlesRequestDTO1.setTitleValue(titlesRequestDTO.getTitleValue());
+            titlesRequestDTO1.setActive(true);
+            titlesRequestDTO1.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
+            titlesRequestDTO1.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
+            titlesRequestDTOS.add(titlesRequestDTO1);
+        }
+
+        valueForCreate.setSalary(salaryDTO);
+        valueForCreate.setTitles(titlesRequestDTOS);
+
+
         try {
             Employee employeeEntity = modelMapper.map(valueForCreate, Employee.class);
-
-            /**
-             * Set Value Abstract Auditing Entity
-             */
-            employeeEntity.setActive(true);
-            employeeEntity.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
-            employeeEntity.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
-            List<Titles> listTitlesEmployee = employeeEntity.getTitles();
-            for (Titles title : listTitlesEmployee) {
-                /**
-                 * Set Value Abstract Auditing Entity
-                 */
-                title.setActive(true);
-                title.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
-                title.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
-            }
-            employeeEntity.setTitles(listTitlesEmployee);
-
-            Salaries salariesEmployee = employeeEntity.getSalary();
-            /**
-             * Set Value Abstract Auditing Entity
-             */
-            salariesEmployee.setActive(true);
-            salariesEmployee.setCreatedDate(ConstantValue.DEFAULT_DATE_NOW);
-            salariesEmployee.setCreatedBy(ConstantValue.DEFAULT_CREATED_BY);
-
-            employeeEntity.setSalary(salariesEmployee);
 
 
             Employee storedEmployeeEntity = employeeRepository.save(employeeEntity);
@@ -85,7 +84,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         } catch (Exception e) {
             throw new Exception(e);
         }
-
     }
 
     @Override
@@ -239,7 +237,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private List<Titles> addAbstractAuditingValueForUpdatedTitles(List<Titles> updateValue, String userId, boolean active) {
         List<Titles> result = updateValue;
         if (updateValue == null || updateValue.isEmpty()) {
-            return null;
+            return new ArrayList<>();
         }
 
         for (Titles title : updateValue) {
