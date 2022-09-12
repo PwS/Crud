@@ -27,11 +27,33 @@
             -->
 
     <!-- Use runOnChange="true", to maintain separate changelog for Stored Procedures -->
-    <changeSet id="DDL01-111-20220907-0005" author="PwS">
+    <changeSet id="DDL01-111-20220907-0001" author="PwS">
         <sqlFile dbms="mysql" relativeToChangelogFile="false"
                  splitStatements="true" stripComments="true"
                  path="/liquibase/changelog/sql/create_table/create_initial_table_departments_20220907.sql"/>
         <comment>CREATE INITIAL TABLE departments</comment>
     </changeSet>
+
+    <changeSet id="DDL01-111-20220907-0002" author="PwS">
+        <sqlFile dbms="mysql" relativeToChangelogFile="false"
+                 splitStatements="true" stripComments="true"
+                 path="/liquibase/changelog/sql/create_table/create_initial_table_employees_20220907.sql"/>
+        <comment>CREATE INITIAL TABLE employees</comment>
+    </changeSet>
+
+    <changeSet id="DDL01-111-20220907-0003" author="PwS">
+        <sqlFile dbms="mysql" relativeToChangelogFile="false"
+                 splitStatements="true" stripComments="true"
+                 path="/liquibase/changelog/sql/create_table/create_initial_table_salaries_20220907.sql"/>
+        <comment>CREATE INITIAL TABLE salaries</comment>
+    </changeSet>
+
+    <changeSet id="DDL01-111-20220907-0004" author="PwS">
+        <sqlFile dbms="mysql" relativeToChangelogFile="false"
+                 splitStatements="true" stripComments="true"
+                 path="/liquibase/changelog/sql/create_table/create_initial_table_titles_20220907.sql"/>
+        <comment>CREATE INITIAL TABLE titles</comment>
+    </changeSet>
+
 
 </databaseChangeLog>
